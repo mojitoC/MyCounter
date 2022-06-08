@@ -7,7 +7,7 @@ import android.os.SystemClock;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    int v= 0;
     TextView count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
                 for(int i = 0; i < 10; i++){
                     SystemClock.sleep(100);
+                    v++;
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run()
                         {
-                            count.setText();
+                            count.setText(String.valueOf(v));
                         }
                     });
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }.start();
+//앙라릴러
 
-dsad
     }
 }
